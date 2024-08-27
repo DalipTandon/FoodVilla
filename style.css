@@ -1,0 +1,119 @@
+*{
+    padding: 0;
+    margin: 0;
+    /* box-sizing: border-box; */
+}
+
+.header{
+    /* height: 12vh; */
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 2px solid black; */
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: -1px 4px 20px 14px rgba(0, 0, 0, 0.2);
+    color: black;
+    font-weight: bold;
+}
+.logo{
+    /* height: 12vh; */
+    width: 100px;
+    /* background-color: blue; */
+    padding-left: 10px;
+}
+.nav-items{
+    /* background-color: red; */
+    display: flex;
+    padding: 0 10px 0;
+    width: auto;
+}
+.nav-items>ul{
+    /* background-color: green; */
+    display: flex;
+    list-style: none;
+
+}
+.nav-items>ul>li{
+    padding: 20px 10px 0 0;
+    font-size: larger;
+    cursor: pointer;
+}
+
+.restaurant-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    /* background-color: red; */
+}
+
+.card{
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: -1px 4px 20px 14px rgba(0, 0, 0, 0.2);
+    padding: 17px;
+    margin: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    /* background-color: blue; */
+
+}
+.image{
+    height: 200;
+    width: 200px;
+}
+.image  img{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card > span{
+    margin-top: 3px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.item-name{
+    width: 90%;
+    text-align: center;
+    font-size: 2.5vh;
+    font-weight: 600px;
+    margin: 2px;
+}
+.card > span > h4{
+    margin-top: 2px;
+    text-align: center;
+    padding: 2px;
+}
+.area{
+    color: rgb(131, 125, 125);
+}
+.card > span > h4:first-child{
+    display: flex;
+    align-items: center;
+    background-color: rgb(19, 176, 1);
+    border-radius: 50%;
+    color: white;
+    font-size: 10px;
+}
+.search-bar{
+    text-align: center;
+    padding: 20px 0px;
+}
+.search-bar >input{
+    height: 1.4vw;
+    width: 30vw;
+    padding: 6px;
+    border-radius: 5px;
+}
+.search-bar >button{
+    height: 2.2vw;
+    width: 7vw;
+    border-radius: 5px;
+    background-color: rgb(89, 138, 254);
+    color: white;
+}
