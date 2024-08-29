@@ -1,7 +1,9 @@
+import Logo from "../assets/img/Logo.webp";
+
 export const Title=()=>{
     return(
     <a href="/">
-        <img className="logo" alt="logo" src="https://logopond.com/logos/a05c97b4573ed3bc95c918febb69b6d9.png"></img>
+        <img className="logo" alt="logo" src={Logo}></img>
     </a>
     );
 }

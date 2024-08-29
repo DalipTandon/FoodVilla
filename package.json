@@ -4,7 +4,10 @@
   "description": "Foodiez website",
   "main": "App.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start":"parcel index.html",
+    "build":"parcel build index.html",
+    "test":"jest"
   },
   "author": "Dalip",
   "license": "ISC",
