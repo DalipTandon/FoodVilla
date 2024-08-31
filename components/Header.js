@@ -1,5 +1,5 @@
 import Logo from "../assets/img/Logo.webp";
-
+import {Link} from "react-router-dom";
 export const Title=()=>{
     return(
     <a href="/">
@@ -13,9 +13,9 @@ const Header=()=>{
         <Title/>
         <div className="nav-items">
             <ul>
-                <li>Home</li>
-                <li>About us</li>
-                <li>Contact</li>
+              <li><Link to="/">Home</Link></li>
+                <li><Link to="/about">About</Link> </li>
+                <li> <Link to="/contact">Contact</Link></li>
                 <li><i className="ri-shopping-cart-2-line"></i></li>
             </ul>
         </div>

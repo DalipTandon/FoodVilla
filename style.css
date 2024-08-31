@@ -39,8 +39,24 @@
     padding: 20px 10px 0 0;
     font-size: larger;
     cursor: pointer;
+    margin-right: 2vw;
 }
+ /* targeting Link tag as Link tag is anchor tag behind the scene so in css if we want to target Link tag we need to write a(anchor tag) */
+.nav-items ul li a{
+    text-decoration: none;
+    color: #000;
 
+}
+.nav-items ul li a:hover{
+ background-color: #D97919;
+ padding: 0.8vw;
+ border-radius: 1vh;
+}
+.nav-items ul li i:hover{
+ background-color: #D97919;
+ padding: 0.8vw;
+ border-radius: 1vh;
+}
 .restaurant-list{
     display: flex;
     flex-wrap: wrap;
@@ -177,4 +193,116 @@
       to {
         background-position: 1000px 0;
       }
+}
+
+/* footer  css*/
+.footer-container{
+    background-color: rgb(79, 145, 251);
+    padding: 2vw;
+    box-shadow: -1px 4px 20px 14px rgba(0, 0, 0, 0.2);
+}
+.footer-container h2{
+    text-align: center;
+    font-style: italic;
+}
+/* About us page */
+.about-container{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 4vw;
+margin-top: 4vw;
+}
+.about-left-half{
+    /* background-color: red; */
+    margin-left: 5vw;
+}
+.about-right-half{
+    margin-right: 5vw;
+}
+.about-left-half h1{
+font-size: 4.3vw;
+line-height: 5vw;
+font-weight: 900;
+}
+.about-left-half span {
+    background-color: #D97919;
+    border-radius: 20px;
+    color: #fff;
+    padding: 1vh;
+}
+.about-left-half h2{
+    margin-top: 2vh;
+    font-style: italic;
+}
+.contact-div{
+    /* background-color: grey; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15vw;
+}
+.contact-div-right h3{
+    font-size: 2.9vw;
+   padding: 1vw;
+   margin-left: 4vw;
+}
+.contact-div-right form input{
+    display: block;
+    padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+  border: 2px solid #aabcca;
+  width: 50vh;
+}
+.contact-div-right form textarea{
+    display: block;
+    padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+  border: 2px solid #aabcca;
+  width: 50vh;
+}
+.contact-div-right form button{
+    padding: 10px 15px;
+    margin-top: 1vw;
+    margin-left:10vw;
+    background-color:#13619d;
+  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+.contact-div-right form button:hover{
+    background-color: #016034;
+}
+.submit-message{
+    display: block;
+    font-size: 1.5vw;
+}
+
+
+/* Error page css */
+.error-div{
+    background-color: #E3E3E3;
+    height: 100vh;
+    text-align: center;
+}
+.error-div h3{
+    font-size: 2.5vw;
+}
+.error-div h4{
+    font-size: 1.5vw;
+    margin: 1vw;
+}
+.error-div button{
+    height: 3vw;
+    width: 8vw;
+    background-color: #D97919;
+    cursor: pointer;
 }

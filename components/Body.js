@@ -57,7 +57,7 @@ const Body=()=>{
             setfilteredRestaurant(filteredData);
             seterrroMessage("");
             if(filteredData?.length===0){
-                seterrroMessage("No matched restaurant Found")
+                seterrroMessage(`Sorry we could't find any result for the "${searchText}"`);
             }
         }else{
             seterrroMessage("");
