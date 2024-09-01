@@ -3,7 +3,10 @@
     margin: 0;
     /* box-sizing: border-box; */
 }
-
+a {
+    text-decoration: none;
+    color: inherit;
+  }
 .header{
     /* height: 12vh; */
     width: auto;
@@ -36,26 +39,46 @@
 
 }
 .nav-items>ul>li{
-    padding: 20px 10px 0 0;
+    padding: 20px 2px 0 0;
     font-size: larger;
     cursor: pointer;
-    margin-right: 2vw;
+    margin-right: 1vw;
 }
  /* targeting Link tag as Link tag is anchor tag behind the scene so in css if we want to target Link tag we need to write a(anchor tag) */
 .nav-items ul li a{
     text-decoration: none;
     color: #000;
-
+    padding: 0.6vw;
+}
+.nav-items ul li i{
+  padding: 0.6vw;
 }
 .nav-items ul li a:hover{
  background-color: #D97919;
- padding: 0.8vw;
+ /* padding: 0.6vw; */
  border-radius: 1vh;
 }
 .nav-items ul li i:hover{
  background-color: #D97919;
- padding: 0.8vw;
+ /* padding: 0.6vw; */
  border-radius: 1vh;
+}
+/* log-in , log-out css */
+.log-in,.log-out{
+  margin-top: 0.5vw;
+  background-color:transparent;
+  border: none;
+  font-size: 1vw;
+  padding: 0.9vw;
+  font-weight: bold;
+}
+.log-in:hover{
+    background-color: #D97919;
+    border-radius:10px;
+}
+.log-out:hover{
+    background-color: #D97919;
+    border-radius:10px;
 }
 .restaurant-list{
     display: flex;
@@ -121,10 +144,11 @@
 .card > span > h4:first-child{
     display: flex;
     align-items: center;
-    background-color: rgb(19, 176, 1);
+    background-color: rgb(11, 129, 52);
     border-radius: 10%;
     color: white;
     font-size: 14px;
+   padding: 0.2vh;
 }
 .search-bar{
     text-align: center;
@@ -306,3 +330,148 @@ font-weight: 900;
     background-color: #D97919;
     cursor: pointer;
 }
+
+
+/* Restaurant menu page css */
+.restaurant-menu {
+    margin-top: 80px;
+    min-height: 80vh;
+    width: auto;
+  }
+  .restaurant-summary {
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+  }
+  .restaurant-img {
+    width: 250px;
+    height: 170px;
+    border-radius: 5px;
+  }
+  .restaurant-summary-details {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 520px;
+    margin: 20px;
+  }
+  .restaurant-title {
+    font-size: 40px;
+    max-width: 540px;
+    font-weight: 300;
+  }
+  .restaurant-tags {
+    white-space: nowrap;
+    color: #000;
+    opacity: 0.7;
+    font-size: 15px;
+    max-width: 540px;
+  }
+  .restaurant-details {
+    display: flex;
+    margin-top: 18px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    color: inherit;
+    font-weight: 600;
+    font-size: 16px;
+    max-width: 340px;
+  }
+  .restaurant-rating {
+    display: flex;
+    align-items: center;
+    padding: 5px 8px;
+    gap: 5px;
+    background-color: rgb(4, 144, 4);
+    border-radius: 5px;
+  }
+  
+  .restaurant-menu-content {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .menu-items-container {
+    margin-top: 30px;
+    width: 850px;
+  }
+  .menu-title-wrap {
+    padding: 20px;
+  }
+  .menu-count {
+    margin-top: 14px;
+    line-height: 1.3;
+    color: rgba(40, 44, 63, 0.45);
+    letter-spacing: -0.3px;
+    font-size: 1rem;
+  }
+  
+  .menu-items-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .menu-item {
+    display: flex;
+    justify-content: space-between;
+    max-height: 250px;
+    padding: 20px;
+    border-bottom: rgba(40, 44, 63, 0.45) 0.5px solid;
+  }
+  .menu-item-details {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    overflow: hidden;
+  }
+  
+  .item-title {
+    width: 60%;
+  }
+  .item-desc {
+    margin-top: 14px;
+    line-height: 1.3;
+    color: rgba(40, 44, 63, 0.45);
+    width: 60%;
+    letter-spacing: -0.3px;
+    font-size: 1rem;
+  }
+  .item-cost {
+    margin-top: 4px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #3e4152;
+    width: 40%;
+  }
+  
+  .menu-img-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    width: 200px;
+    overflow: hidden;
+  }
+  .menu-item-img {
+    height: 100px;
+    width: 100px;
+    border-radius: 5px;
+  }
+  .add-btn {
+    background-color:#D97919;
+    color: #000;
+    padding: 8px 25px;
+    cursor: pointer;
+    outline: none;
+    border-color:#D97919;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+  
+
+  

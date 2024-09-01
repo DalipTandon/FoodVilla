@@ -3,6 +3,7 @@ import { restaurantList } from "../utils/constant";
 import { useState ,useEffect} from "react";
 import { Food_Api } from "../utils/constant";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
  
 //filter function for the search bar
 const filterData=(searchText,restaurants)=>{
@@ -88,7 +89,9 @@ const Body=()=>{
         (<Shimmer/>) : (
         <div className="restaurant-list">
            { filteredRestaurant.map((restaurant)=>{
-              return <RestaurantCard {...restaurant?.info} key={restaurant?.info?.id}/>
+              return <Link  to={"/restaurant/" + restaurant?.info?.id}
+              key={restaurant?.info?.id}><RestaurantCard {...restaurant?.info} />
+              </Link>;
             })
             }
         </div>
