@@ -1,6 +1,7 @@
 import Logo from "../assets/img/Logo.webp";
 import {Link} from "react-router-dom";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 export const Title=()=>{
     return(
     <a href="/">
@@ -9,7 +10,8 @@ export const Title=()=>{
     );
 }
 const Header=()=>{
-    const[loggedin,setLoggedin]=useState(false);
+    const[loggedin,setLoggedin]=useState(true);
+    const navigate=useNavigate();
     return(
         <div className="header">
         <Title/>
@@ -25,7 +27,7 @@ const Header=()=>{
                     Logout
                 </button>
             ) :(
-                <button className="log-out" onClick={()=>setLoggedin(true)}>Login</button>
+                <button className="log-out" onClick={()=>navigate("/login")}>Login</button>
             )
             }
         </div>

@@ -474,4 +474,41 @@ font-weight: 900;
   }
   
 
-  
+  /* Login form css */
+  .login-form-container{
+    height: 100vh;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .login-from{
+    background-color: #FFAF60;
+        height: 25vw;
+    width: 50vh;
+    border-radius: 20px;
+  }
+  .form-item{
+    padding: 3vw;
+  }
+  .form-item h2{
+    margin-left: 4vw;
+    font-size: 3vw;
+  }
+  .form-item input{
+    margin-top: 1vw;
+    display: block;
+    width: 15vw;
+    height: 5vh;
+    border-radius: 10px;
+    padding: 0.3vw;
+  }
+.submit-button{
+    width: 15vw;
+    height: 5vh;
+    border-radius: 10px;
+    margin-top: 1vw;
+    background-color: #4B6CB7;
+    padding: 0.5vw;
+  }
