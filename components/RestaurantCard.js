@@ -6,14 +6,18 @@ import {restaurantList} from "../utils/constant";
   // Ensure cuisines is an array and use it safely
   const displayedCuisines = Array.isArray(cuisines) ? cuisines.slice(0, maxCuisinesToShow).join(", ") : "";
   const additionalCuisines = cuisines.length > maxCuisinesToShow ? "..." : ""; 
+
+  const maxResNameLength=20;
+  const displayName = name.length > maxResNameLength ? name.slice(0, maxResNameLength) + "..." : name;
   return(
     <div className="card">
       <div className="image">
       <img src={IMG_CDN+cloudinaryImageId}/>
       </div>
-        <h2 className="item-name">{name}</h2>
+        <h2 className="item-name">{displayName}</h2>
+        <h4  className="cuisines" >{displayedCuisines + additionalCuisines}</h4>
         <h4 className="area">{areaName}</h4>
-        <h4  className="area" >{displayedCuisines + additionalCuisines}</h4>
+
         <span>
 
         <h4>

@@ -9,16 +9,20 @@ a {
   }
 .header{
     /* height: 12vh; */
-    width: auto;
+    position:fixed;
+    top:0;
+    overflow: hidden;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     /* border: 2px solid black; */
-    margin: 10px;
+    /* margin: 10px; */
     border-radius: 5px;
     box-shadow: -1px 4px 20px 14px rgba(0, 0, 0, 0.2);
     color: black;
     font-weight: bold;
+    background-color: #FFFFFF;
 }
 .logo{
     /* height: 12vh; */
@@ -81,6 +85,7 @@ a {
     border-radius:10px;
 }
 .restaurant-list{
+  padding-top: 2vw;
     display: flex;
     flex-wrap: wrap;
     justify-content:center;
@@ -94,10 +99,12 @@ a {
   }
 
 .card{
+  /* background-color: red; */
     width: 200px;
+    height: 250px;
     border-radius: 5px;
     box-shadow: -1px 4px 20px 14px rgba(0, 0, 0, 0.2);
-    padding: 17px;
+    padding: 15px;
     margin: 10px;
     cursor: pointer;
     overflow: hidden;
@@ -107,7 +114,7 @@ a {
 }
 .image{
     height: 150px;
-    width: 200px;
+    width: 200  px;
 }
 .image  img{
     height: 100%;
@@ -120,7 +127,9 @@ a {
 .card > span{
     margin-top: 3px;
     display: flex;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
+    /* background-color: #016034; */
+    gap: 1vw;
 }
 
 .item-name{
@@ -132,13 +141,21 @@ a {
     /* background-color: blue; */
 }
 .card > span > h4{
-    text-align: center;
+    text-align: start;
     /* background-color: red; */
     font-size: 1.8vh;
+}
+.cuisines{
+    color: #000;
+    /* background-color: pink; */
+    width: 14vw;
+    font-size: 1.8vh;
+    margin-bottom: 0.2vw;
 }
 .area{
     color: #000;
     /* background-color: pink; */
+    width: 100%;
     font-size: 1.8vh;
 }
 .card > span > h4:first-child{
@@ -150,9 +167,16 @@ a {
     font-size: 14px;
    padding: 0.2vh;
 }
+.card > h2{
+/* background-color: pink; */
+width: 100%;
+text-align: start;
+margin: 0.2vw;
+}
 .search-bar{
+  /* background-color: pink; */
     text-align: center;
-    padding: 20px 0px;
+    padding-top: 10vw;
 }
 .search-bar >input{
     height: 1.4vw;
@@ -231,10 +255,11 @@ a {
 }
 /* About us page */
 .about-container{
+  /* background-color: #016034; */
 display: flex;
 justify-content: space-between;
 align-items: center;
-padding: 4vw;
+padding:6vw 4vw;
 margin-top: 4vw;
 }
 .about-left-half{
@@ -261,6 +286,7 @@ font-weight: 900;
 }
 .contact-div{
     /* background-color: grey; */
+    padding-top: 10vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -334,6 +360,7 @@ font-weight: 900;
 
 /* Restaurant menu page css */
 .restaurant-menu {
+  padding-top: 4vw;
     margin-top: 80px;
     min-height: 80vh;
     width: auto;
@@ -364,7 +391,7 @@ font-weight: 900;
   .restaurant-tags {
     white-space: nowrap;
     color: #000;
-    opacity: 0.7;
+    /* opacity: 0.7; */
     font-size: 15px;
     max-width: 540px;
   }

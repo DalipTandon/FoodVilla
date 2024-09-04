@@ -75,6 +75,7 @@ const Body=()=>{
             value={searchText}
             onChange={(e)=>{
                 setsearchText(e.target.value);
+                SearchData(e.target.value, allRestaurants); //sending the values typed on input search box to SearchData function
             }}
             />
             <button className="search-button" onClick={
