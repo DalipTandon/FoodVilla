@@ -8,7 +8,7 @@ a {
     color: inherit;
   }
 .header{
-    /* height: 12vh; */
+    height: 12vh;
     position:fixed;
     top:0;
     overflow: hidden;
@@ -539,3 +539,57 @@ font-weight: 900;
     background-color: #4B6CB7;
     padding: 0.5vw;
   }
+
+
+
+  /* Help container */
+ .help-container{
+  margin-top: 5vw;
+  height: fit-content;
+  /* background-color: #7f8ddf; */
+ }
+ .help-div{
+      height: 80vh;
+      /* background-color: #016034; */
+      padding: 3vw;
+ }
+ .help-text{
+  /* background-color: pink; */
+  text-align: center;
+  padding-top: 5vw ;
+  font-size: 4vw;
+
+ }
+ .main-div{
+  /* background-color: red; */
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2vw;
+ }
+ .section-div{
+  background-color: #469ee2;
+  border-top: 1px solid black;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  padding: 1vw;
+
+ }
+ .help-button{
+  height: 2vw;
+  width: 5vw;
+  padding: 1vh;
+ }
+ .help-title{
+  font-size:1.5vw;
+  display: block;
+ }
+ .help-description{
+  /* background-color: red; */
+  font-size: 1vw;
+  font-weight: 600;
+ }
+ 
+ 
