@@ -5,7 +5,7 @@ const About=()=>{
             <div className="about-left-half">
             <h1>Welcome to <br/>
             The world of <br/>
-            <span>
+            <span className="about-span">
                 Tasty & Fresh Food
               </span>
               </h1>

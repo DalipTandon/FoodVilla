@@ -12,6 +12,14 @@ export const Title=()=>{
 const Header=()=>{
     const[loggedin,setLoggedin]=useState(true);
     const navigate=useNavigate();
+    const handleLoginLogout = () => {
+        if (loggedin) {
+            setLoggedin(false); // Set logged in to false (logout)
+            navigate("/login");  // Navigate to login page
+        } else {
+            setLoggedin(true);  // Set logged in to true (login)
+        }
+    };
     return(
         <div className="header">
         <Title/>
@@ -23,12 +31,10 @@ const Header=()=>{
                 <li> <Link to="/help">Help</Link></li>
                 <li><i className="ri-shopping-cart-2-line"></i></li>
             </ul>
-            {loggedin ? (
-                <button className="log-in" onClick={()=>setLoggedin(false)}>
-                    Logout
-                </button>
+            {!loggedin ? (
+                <button className="log-out" onClick={handleLoginLogout}> Logout</button>
             ) :(
-                <button className="log-out" onClick={()=>navigate("/login")}>Login</button>
+                <button className="log-in" onClick={handleLoginLogout}>Login</button>
             )
             }
         </div>
