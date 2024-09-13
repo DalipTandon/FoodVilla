@@ -1273,3 +1273,14 @@ font-weight: 600;
 
 
 }
+
+
+.login-btn-green {
+color: rgb(128, 0, 34);
+}
+
+
+
+.login-btn-red{
+color: rgb(9, 255, 0);
+}

@@ -4,52 +4,15 @@ import { useState ,useEffect} from "react";
 import { Food_Api } from "../utils/constant";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
- 
+import useResturantData from "../Hooks/useResturantData";
+import { filterData } from "../utils/Helper";
 //filter function for the search bar
-const filterData=(searchText,restaurants)=>{
-   const filterData= restaurants.filter((res)=>{
-    return (res?.info?.name?.toLowerCase()?.includes(searchText.toLowerCase()));
-    })
-    return filterData;
-}
 const Body=()=>{
     //react state variables 
     const[searchText,setsearchText]=useState("");
-    const[allRestaurants,setallRestaurants]=useState([]);
-    const[filteredRestaurant,setfilteredRestaurant]=useState([]);
+    const[allRestaurants,filterres]=useResturantData(Food_Api); //useResturant is a custom hook which will return the fetched data
+    const[filteredRestaurant,setfilteredRestaurant]=useState(null);
     const[errorMessage,seterrroMessage]=useState("");
-
-    //useEffect() hook
-    useEffect(()=>{
-        cardDataApi();
-        
-    },[]);
- 
-     //fetching api data
-   const cardDataApi=async()=>{
-    try{
-        const response=await fetch(Food_Api);
-        const json=await response.json();
-        
-        function checkJsonData(jsonData){
-            for(let i=0;i<jsonData?.data?.cards.length; i++){
-                let checkData =  json?.data?.cards[i]?.card?.card?.gridElements?.infoWithStyle
-              ?.restaurants;
-
-              if(checkData!=undefined){
-                return checkData;
-              }
-            }
-        }
-        const resData=checkJsonData(json)
-        setallRestaurants(resData);
-        setfilteredRestaurant(resData);
-    }
-    catch(error){
-        console.log(error);
-        
-    }
-    }
 
     //error message if search is not available
     const SearchData=(searchText,allRestaurants)=>{
@@ -86,10 +49,10 @@ const Body=()=>{
         </div>
         {errorMessage && <div className="error-container">{errorMessage}</div>}
         {/* {creating shimmer effect before api fetching} */}
-        {allRestaurants?.length===0?
+        {allRestaurants?.length===0 && filterres.length===0?
         (<Shimmer/>) : (
         <div className="restaurant-list">
-           { filteredRestaurant.map((restaurant)=>{
+           { (filteredRestaurant===null?filterres:filteredRestaurant).map((restaurant)=>{
               return <Link  to={"/restaurant/" + restaurant?.info?.id}
               key={restaurant?.info?.id}><RestaurantCard {...restaurant?.info} />
               </Link>;

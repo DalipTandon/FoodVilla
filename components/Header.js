@@ -2,6 +2,7 @@ import Logo from "../assets/img/Logo.webp";
 import {Link} from "react-router-dom";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import useOnline from "../Hooks/useOnline";
 export const Title=()=>{
     return(
     <a href="/">
@@ -10,16 +11,9 @@ export const Title=()=>{
     );
 }
 const Header=()=>{
-    const[loggedin,setLoggedin]=useState(true);
+    const[loggedin,setLoggedin]=useState(false);
+    const isOnline=useOnline();
     const navigate=useNavigate();
-    const handleLoginLogout = () => {
-        if (loggedin) {
-            setLoggedin(false); // Set logged in to false (logout)
-            navigate("/login");  // Navigate to login page
-        } else {
-            setLoggedin(true);  // Set logged in to true (login)
-        }
-    };
     return(
         <div className="header">
         <Title/>
@@ -32,9 +26,19 @@ const Header=()=>{
                 <li><i className="ri-shopping-cart-2-line"></i></li>
             </ul>
             {!loggedin ? (
-                <button className="log-out" onClick={handleLoginLogout}> Logout</button>
+                <button className="log-out" onClick={setLoggedin(true)}> Logout   <span
+                className={isOnline ? "login-btn-green" : "login-btn-red"}
+              >
+                {" "}
+                ●
+              </span></button>
             ) :(
-                <button className="log-in" onClick={handleLoginLogout}>Login</button>
+                <button className="log-in" onClick={()=>navigate("/login")}>Login  <span
+                className={isOnline ? "login-btn-green" : "login-btn-red"}
+              >
+                {" "}
+                ●
+              </span></button>
             )
             }
         </div>
