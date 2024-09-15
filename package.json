@@ -2,7 +2,6 @@
   "name": "foodiez",
   "version": "1.0.0",
   "description": "Foodiez website",
-  "main": "App.js",
   "scripts": {
     "test": "jest",
     "start": "parcel index.html",
